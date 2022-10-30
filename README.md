@@ -1,4 +1,4 @@
-# AngularAzureAD
+# AngularAzureAD : Sample application with material design CRUD operations and Azure Active directory implementation in progress. 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
 
