@@ -1,0 +1,72 @@
+{
+  "productList": [
+    {
+      "productName": "Broccli",
+      "category": "Vegetables",
+      "freshness": "Brand New",
+      "price": 25,
+      "comment": "Good for health.",
+      "date": "2022-10-26T18:30:00.000Z",
+      "id": 3
+    },
+    {
+      "productName": "Turnip",
+      "category": "Vegetables",
+      "freshness": "Brand New",
+      "price": 25,
+      "comment": "Yummy turnips",
+      "date": "2022-10-26T18:30:00.000Z",
+      "id": 4
+    },
+    {
+      "productName": "Beans",
+      "category": "Vegetables",
+      "freshness": "Brand New",
+      "price": 25,
+      "comment": "Fresh farm beans",
+      "date": "2022-10-26T18:30:00.000Z",
+      "id": 5
+    },
+    {
+      "productName": "Almonds",
+      "category": "Dry Fruits",
+      "freshness": "Brand New",
+      "price": 550,
+      "comment": "Fresh California almonds",
+      "date": "2022-10-27T18:30:00.000Z",
+      "id": 6
+    }
+  ],
+  "categoryList": [
+    {
+      "category": "Fruits"
+    },
+    {
+      "category": "Dry Fruits"
+    },
+    {
+      "category": "Vegetables"
+    }
+  ],
+  "frehnessList": [
+    {
+      "freshness": "Brand New"
+    },
+    {
+      "freshness": "Second Hand"
+    },
+    {
+      "freshness": "Refurbished"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -3,14 +3,32 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: 'http://localhost:44390/',
+  scopeUri: ['api://<Scope-URI>/Web-API'],
+  tenantId: '<Tenant-GUID>',
+  uiClienId: '<Client-GUID>',
+  redirectUrl: 'http://localhost:4200',
+  authorityDomain: '<Domain>',
+  b2cPolicies: {
+    names: {
+      signUpSignIn: "",
+      resetPassword: "",
+      editProfile: ""
+    },
+    authorities: {
+      signUpSignIn: {
+        authority: ""
+      },
+      resetPassword: {
+        authority: ""
+      },
+      editProfile: {
+        authority: ""
+      }
+    },
+    authorityDomain: "anandit2017gmail.onmicrosoft.com"
+  },
+  postLogoutUrl:"http://localhost:4200"
 };
 
-/*
- * For easier debugging in development mode, you can import the following file
- * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
- *
- * This import should be commented out in production mode because it will have a negative impact
- * on performance if an error is thrown.
- */
-// import 'zone.js/plugins/zone-error';  // Included with Angular CLI.

@@ -1,0 +1,64 @@
+<!-- <div *ngIf="!loginDisplay">
+    <p class="welcome">Welcome to the MSAL.js v2 Angular Quickstart!</p>
+    <p>This sample demonstrates how to configure MSAL Angular to login, logout, protect a route, and acquire an access
+        token for a protected resource such as the Microsoft Graph.</p>
+    <p>Please sign-in to see your profile information.</p>
+</div>
+
+<div *ngIf="loginDisplay">
+    <p>Login successful!</p>
+    <p>Call a B2C protected web API by selecting the Hello API link above.</p>
+    <p>Claims in your ID token are shown below: </p>
+</div> -->
+
+<div class="event-list-table center p-24 pb-56 pr-sm-24 container-div">
+    <mat-form-field style="width:100%">
+        <input matInput (keyup)="applyFilter($event)" placeholder="Filter">
+    </mat-form-field>
+    <div class="content mat-white-bg mat-elevation-z4">
+        <div class="example-container mat-elevation-z8">
+
+            <mat-tab-group (selectedTabChange)="tabClick($event)">
+                <mat-tab label="{{tab.category}}" *ngFor="let tab of tabs">
+
+                    <table mat-table #table [dataSource]="dataSource" class="mat-elevation-z8 example-container" matSort>
+
+                        <ng-container [matColumnDef]="k" *ngFor="let k of displayedColumns">
+
+                            <th mat-header-cell *matHeaderCellDef mat-sort-header>{{k}}</th>
+
+                            <ng-container *ngIf="k==='Price'">
+                                <td mat-cell id="cell_{{k}}" *matCellDef="let element">
+                                    {{element[k]=='undefined'?'':element[k] | currency}} </td>
+                            </ng-container>
+                            <ng-container *ngIf="k==='Date'">
+                                <td mat-cell id="cell_{{k}}" *matCellDef="let element">
+                                    {{element[k]=='undefined'?'':element[k] | date:'shortDate'}} </td>
+                            </ng-container>
+                            <ng-container *ngIf="k==='Action'">
+                                <td mat-cell id="cell_{{k}}" *matCellDef="let element">
+                                    <button mat-icon-button color="primary" (click)="openDialog(element)">
+                                        <mat-icon>edit</mat-icon>
+                                    </button>
+                                    <button mat-icon-button color="warn" (click)="deleteProduct(element)">
+                                        <mat-icon>delete</mat-icon>
+                                    </button>
+                                </td>
+                            </ng-container>
+                            <td mat-cell id="cell_{{k}}" *matCellDef="let element">
+                                {{element[k]=='undefined'?'':element[k]}} </td>
+                        </ng-container>
+
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                    </table>
+                    <mat-paginator class="mat-elevation-z8" [length]="100" [pageSize]="10"
+                        [pageSizeOptions]="[2, 5, 10, 25, 100]">
+                    </mat-paginator>
+                </mat-tab>
+            </mat-tab-group>
+        </div>
+    </div>
+</div>
